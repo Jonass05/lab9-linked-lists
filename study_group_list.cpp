@@ -76,6 +76,18 @@ public:
     // ===== Resolve these TODOs later (Part E) =====
 
     // TODO (Part E): Write containsGroup as a const member function that searches by group code.
+    bool containsGroup(const string searchGroupCode) const
+    {
+        Node *currentNode = head;
+        while (currentNode != nullptr) {
+            if (currentNode->groupCode == searchGroupCode) {
+                return true;
+            }
+            currentNode = currentNode->next;
+        }
+        return false;
+    }
+
 };
 
 int main()
@@ -85,9 +97,20 @@ int main()
     // ===== Resolve these TODOs later (Part E) =====
 
     // TODO (Part E): Create a StudyGroupList object.
+    StudyGroupList myStudyGroupList;
+
     // TODO (Part E): Add three dummy groups with different codes and room numbers.
+    myStudyGroupList.addGroup("A010", 25);
+    myStudyGroupList.addGroup("A020", 45);
+    myStudyGroupList.addGroup("A030", 65);
+
     // TODO (Part E): Display every stored group and print the result of size().
+    myStudyGroupList.displayGroups();
+    cout << "Number of groups: " << myStudyGroupList.size() << endl;
+
     // TODO (Part E): Search for one stored group code and one missing group code; print both bool results.
+    cout << "Contains 'A010': " << myStudyGroupList.containsGroup("A010") << endl;
+    cout << "Contains 'A040': " << myStudyGroupList.containsGroup("A040") << endl;
 
     return 0;
 }
