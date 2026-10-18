@@ -109,8 +109,8 @@ int main()
     cout << "Number of groups: " << myStudyGroupList.size() << endl;
 
     // TODO (Part E): Search for one stored group code and one missing group code; print both bool results.
-    cout << "Contains 'A010': " << myStudyGroupList.containsGroup("A010") << endl;
-    cout << "Contains 'A040': " << myStudyGroupList.containsGroup("A040") << endl;
+    cout << "Contains 'A010' exist?: " << myStudyGroupList.containsGroup("A010") << endl;
+    cout << "Contains 'A040' exist?: " << myStudyGroupList.containsGroup("A040") << endl;
 
     return 0;
 }
